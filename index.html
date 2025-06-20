@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKEELP Token</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #1c1c1c;
+      padding: 1rem 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .buy-button {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+    }
+    .buy-button button {
+      background-color: #f5c542;
+      color: #121212;
+      border: none;
+      padding: 0.6rem 1.1rem;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .buy-button button:hover {
+      background-color: #e4b937;
+    }
+    .logo-section {
+      text-align: center;
+      flex: 1;
+    }
+    .logo-section h1 {
+      font-size: 2rem;
+      color: #f5c542;
+    }
+    .wallet-button {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+    .wallet-button button {
+      background-color: #f5c542;
+      color: #121212;
+      border: none;
+      padding: 0.6rem 1.1rem;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .wallet-button button:hover {
+      background-color: #e4b937;
+    }
+    header p {
+      font-size: 1rem;
+      color: #ccc;
+      width: 100%;
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .hero {
+      background-color: #1f1f1f;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 1rem;
+      background-color: #181818;
+    }
+    .feature {
+      background-color: #242424;
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid #2f2f2f;
+    }
+    .feature h3 {
+      color: #f5c542;
+      margin-bottom: 0.5rem;
+    }
+    .feature p {
+      color: #bbb;
+    }
+    .contract-section {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #1c1c1c;
+    }
+    .contract-section h2 {
+      color: #f5c542;
+      margin-bottom: 1rem;
+    }
+    .contract-section p {
+      font-size: 1.1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+  <script>
+    async function connectWallet() {
+      if (typeof window.ethereum !== 'undefined') {
+        try {
+          await window.ethereum.request({ method: 'eth_requestAccounts' });
+          alert('Carteira conectada com sucesso!');
+        } catch (err) {
+          alert('Erro ao conectar: ' + err.message);
+        }
+      } else {
+        alert('MetaMask não está instalada. Instale para continuar.');
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="buy-button">
+      <button onclick="window.location.href='#comprar'">Comprar Token</button>
+    </div>
+    <div class="logo-section">
+      <h1>SKEELP TOKEN</h1>
+    </div>
+    <div class="wallet-button">
+      <button onclick="connectWallet()">Conectar Carteira</button>
+    </div>
+    <p>O Futuro Cripto em Suas Mãos!</p>
+  </header>
+
+  <section class="hero">
+    <h2>🔥 SKEELP Token – O Futuro Cripto em Suas Mãos! 🔥</h2>
+    <p>
+      Prepare-se para revolucionar sua jornada no universo digital com o SKEELP Token – um ativo cripto inovador, feito para quem busca liberdade financeira, tecnologia de ponta e oportunidades reais de crescimento.
+    </p>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>💀 Comunidade Forte</h3>
+      <p>SKEELP não é apenas mais um token. É uma comunidade, uma visão, uma nova forma de viver o mundo descentralizado.</p>
+    </div>
+    <div class="feature">
+      <h3>🔒 Segurança Total</h3>
+      <p>Projetado com tecnologia de ponta para manter seus ativos protegidos em qualquer cenário.</p>
+    </div>
+    <div class="feature">
+      <h3>🚀 Transações Rápidas</h3>
+      <p>Com tecnologia de blockchain moderna, nossas transações são instantâneas e com taxas mínimas.</p>
+    </div>
+    <div class="feature">
+      <h3>💸 Valorização Estratégica</h3>
+      <p>Supply limitado e transparente, pronto para impulsionar o crescimento sustentável do token.</p>
+    </div>
+    <div class="feature">
+      <h3>🌐 Integração com DeFi e NFTs</h3>
+      <p>Pronto para ser utilizado em games, plataformas DeFi e ecossistemas NFT.</p>
+    </div>
+  </section>
+
+  <section class="contract-section">
+    <h2>Contrato do Token</h2>
+    <p>📜 <code>0x456d911b9E0cf689A495e8C6518Ec9Ee63d09738</code></p>
+  </section>
+
+  <footer>
+    &copy; 2025 SKEELP Token. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
+
